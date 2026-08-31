@@ -1,5 +1,6 @@
 import type { Recipe } from "../types/Recipe";
 import { oats, salt, water } from "./ingredients";
+import { twoCupGlassMeasuringCup } from "./cookingTools";
 
 export const oatmeal: Recipe = {
   id: 1,
@@ -21,6 +22,11 @@ export const oatmeal: Recipe = {
       ingredient: salt,
       quantity: 0.125,
       unit: "teaspoon",
+    },
+  ],
+  tools: [
+    {
+      tool: twoCupGlassMeasuringCup,
     },
   ],
 };

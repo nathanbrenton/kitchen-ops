@@ -1,5 +1,10 @@
 function App() {
-  return <h1>KitchenOps</h1>;
+  return (
+    <main>
+      <h1>KitchenOps</h1>
+      <p>Recipes, nutrition, meal planning, inventory, and grocery workflows.</p>
+    </main>
+  );
 }
 
 export default App;

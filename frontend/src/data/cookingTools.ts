@@ -1,6 +1,7 @@
 import type { CookingTool } from "../types/CookingTool";
 import type { LiquidMeasuringCup } from "../types/LiquidMeasuringCup";
 import type { Pan } from "../types/Pan";
+import type { Pot } from "../types/Pot";
 
 export const twoCupGlassMeasuringCup: LiquidMeasuringCup = {
   id: 1,
@@ -21,9 +22,23 @@ export const saucepan: Pan = {
   photoUrl: null,
   category: "pan",
   type: "sauce",
+  capacity: 2,
+  capacityUnit: "quart",
+};
+
+export const stockPot: Pot = {
+  id: 3,
+  title: "Stock Pot",
+  description: "A deep pot used for boiling, simmering, and preparing larger quantities.",
+  photoUrl: null,
+  category: "pot",
+  type: "stock",
+  capacity: 8,
+  capacityUnit: "quart",
 };
 
 export const cookingTools: CookingTool[] = [
   twoCupGlassMeasuringCup,
   saucepan,
+  stockPot,
 ];

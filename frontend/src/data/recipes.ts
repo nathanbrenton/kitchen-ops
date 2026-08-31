@@ -30,9 +30,13 @@ export const oatmeal: Recipe = {
   tools: [
     {
       tool: twoCupGlassMeasuringCup,
+      minimumServings: 1,
+      maximumServings: 4,
     },
     {
       tool: saucepan,
+      minimumServings: 1,
+      maximumServings: 2,
     },
   ],
 };

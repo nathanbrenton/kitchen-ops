@@ -1,6 +1,9 @@
 import type { Recipe } from "../types/Recipe";
 import { oats, salt, water } from "./ingredients";
-import { twoCupGlassMeasuringCup } from "./cookingTools";
+import { 
+  saucepan,
+  twoCupGlassMeasuringCup,
+} from "./cookingTools";
 
 export const oatmeal: Recipe = {
   id: 1,
@@ -27,6 +30,9 @@ export const oatmeal: Recipe = {
   tools: [
     {
       tool: twoCupGlassMeasuringCup,
+    },
+    {
+      tool: saucepan,
     },
   ],
 };

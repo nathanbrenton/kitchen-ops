@@ -1,5 +1,6 @@
 import type { CookingTool } from "../types/CookingTool";
 import type { LiquidMeasuringCup } from "../types/LiquidMeasuringCup";
+import type { Pan } from "../types/Pan";
 
 export const twoCupGlassMeasuringCup: LiquidMeasuringCup = {
   id: 1,
@@ -13,6 +14,16 @@ export const twoCupGlassMeasuringCup: LiquidMeasuringCup = {
   unit: "cup",
 };
 
-export const cookintTools: CookingTool[] = [
+export const saucepan: Pan = {
+  id: 2,
+  title: "Saucepan",
+  description: "A pan with high sides used for simmering, boiling, and stovetop cooking.",
+  photoUrl: null,
+  category: "pan",
+  type: "sauce",
+};
+
+export const cookingTools: CookingTool[] = [
   twoCupGlassMeasuringCup,
+  saucepan,
 ];

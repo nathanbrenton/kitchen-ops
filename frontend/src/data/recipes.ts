@@ -4,6 +4,7 @@ import {
   saucepan,
   twoCupGlassMeasuringCup,
 } from "./cookingTools";
+import { rolled } from "./ingredientForms";
 
 export const oatmeal: Recipe = {
   id: 1,
@@ -25,6 +26,7 @@ export const oatmeal: Recipe = {
         },
         {
           ingredient: oats,
+          form: rolled,
           quantity: 0.5,
           unit: "cup",
         },

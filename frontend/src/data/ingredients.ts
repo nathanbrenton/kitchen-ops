@@ -31,6 +31,7 @@ export const water: Ingredient = {
     distilled,
     charcoalFiltered,
   ],
+  storageProfiles: [],
 };
 
 export const salt: Ingredient = {
@@ -44,6 +45,7 @@ export const salt: Ingredient = {
     celticSeaSalt,
   ],
   recommendedProcessingMethods: [],
+  storageProfiles: [],
 };
 
 export const oats: Ingredient = {
@@ -58,4 +60,5 @@ export const oats: Ingredient = {
   attributes: [],
   varieties: [],
   recommendedProcessingMethods: [],
+  storageProfiles: [],
 };

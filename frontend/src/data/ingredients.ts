@@ -27,7 +27,7 @@ export const water: Ingredient = {
   forms: [],
   attributes: [],
   varieties: [],
-  processingMethods: [
+  recommendedProcessingMethods: [
     distilled,
     charcoalFiltered,
   ],
@@ -43,7 +43,7 @@ export const salt: Ingredient = {
   varieties: [
     celticSeaSalt,
   ],
-  processingMethods: [],
+  recommendedProcessingMethods: [],
 };
 
 export const oats: Ingredient = {
@@ -57,5 +57,5 @@ export const oats: Ingredient = {
   ],
   attributes: [],
   varieties: [],
-  processingMethods: [],
+  recommendedProcessingMethods: [],
 };

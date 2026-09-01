@@ -12,5 +12,5 @@ export type Ingredient = {
   forms: IngredientForm[];
   attributes: IngredientAttribute[];
   varieties: IngredientVariety[];
-  processingMethods: IngredientProcessingMethod[];
+  recommendedProcessingMethods: IngredientProcessingMethod[];
 };

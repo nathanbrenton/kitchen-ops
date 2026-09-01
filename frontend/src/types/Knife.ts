@@ -1,7 +1,7 @@
-import type { BaseCookingTool } from "./BaseCookingTool";
+import type { BaseKitchenTool } from "./BaseKitchenTool";
 import type { KnifeType } from "./KnifeTypes";
 
-export type Knife = BaseCookingTool & {
+export type Knife = BaseKitchenTool & {
   category: "knife";
   type: KnifeType;
 };

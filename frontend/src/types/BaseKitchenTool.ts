@@ -1,4 +1,4 @@
-export type BaseCookingTool = {
+export type BaseKitchenTool = {
   id: number;
   title: string;
   description: string;

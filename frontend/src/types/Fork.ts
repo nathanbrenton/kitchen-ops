@@ -1,7 +1,7 @@
-import type { BaseCookingTool } from "./BaseCookingTool";
+import type { BaseKitchenTool } from "./BaseKitchenTool";
 import type { ForkType } from "./ForkTypes";
 
-export type Fork = BaseCookingTool & {
+export type Fork = BaseKitchenTool & {
   category: "fork";
   type: ForkType;
 };

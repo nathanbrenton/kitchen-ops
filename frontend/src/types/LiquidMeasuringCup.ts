@@ -1,7 +1,7 @@
-import type { BaseCookingTool } from "./BaseCookingTool";
+import type { BaseKitchenTool } from "./BaseKitchenTool";
 import type { LiquidMeasuringCupSize } from "./LiquidMeasuringCupSizes";
 
-export type LiquidMeasuringCup = BaseCookingTool & {
+export type LiquidMeasuringCup = BaseKitchenTool & {
   category: "measuring-cup";
   measurementStyle: "liquid";
   material: "glass";

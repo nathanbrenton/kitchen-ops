@@ -5,12 +5,18 @@ import {
   mineralIngredients,
 } from "./ingredientFoodGroups";
 
+import { celticSeaSalt } from "./ingredientVarieties";
+
+import {
+  charcoalFiltered,
+  distilled,
+} from "./ingredientProcessingMethods";
+
 import {
   rolled,
   steelCut,
 } from "./ingredientForms";
 
-import { celticSeaSalt } from "./ingredientVarieties";
 
 
 export const water: Ingredient = {
@@ -21,6 +27,10 @@ export const water: Ingredient = {
   forms: [],
   attributes: [],
   varieties: [],
+  processingMethods: [
+    distilled,
+    charcoalFiltered,
+  ],
 };
 
 export const salt: Ingredient = {
@@ -33,6 +43,7 @@ export const salt: Ingredient = {
   varieties: [
     celticSeaSalt,
   ],
+  processingMethods: [],
 };
 
 export const oats: Ingredient = {
@@ -46,4 +57,5 @@ export const oats: Ingredient = {
   ],
   attributes: [],
   varieties: [],
+  processingMethods: [],
 };

@@ -10,6 +10,8 @@ import {
   steelCut,
 } from "./ingredientForms";
 
+import { celticSeaSalt } from "./ingredientVarieties";
+
 
 export const water: Ingredient = {
   id: 1,
@@ -17,6 +19,8 @@ export const water: Ingredient = {
   description: "Water used for cooking and food preparation.",
   foodGroups: [],
   forms: [],
+  attributes: [],
+  varieties: [],
 };
 
 export const salt: Ingredient = {
@@ -25,6 +29,10 @@ export const salt: Ingredient = {
   description: "A mineral seasoning used to enhance flavor.",
   foodGroups: [mineralIngredients],
   forms: [],
+  attributes: [],
+  varieties: [
+    celticSeaSalt,
+  ],
 };
 
 export const oats: Ingredient = {
@@ -36,4 +44,6 @@ export const oats: Ingredient = {
     rolled,
     steelCut,
   ],
+  attributes: [],
+  varieties: [],
 };

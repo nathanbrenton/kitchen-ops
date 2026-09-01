@@ -1,10 +1,17 @@
 import type { Recipe } from "../types/Recipe";
+
 import { oats, salt, water } from "./ingredients";
+
 import { 
   saucepan,
   twoCupGlassMeasuringCup,
 } from "./cookingTools";
+
 import { rolled } from "./ingredientForms";
+
+import { celticSeaSalt } from "./ingredientVarieties";
+
+
 
 export const oatmeal: Recipe = {
   id: 1,
@@ -21,6 +28,7 @@ export const oatmeal: Recipe = {
         },
         {
           ingredient: salt,
+          variety: celticSeaSalt,
           quantity: 0.25,
           unit: "teaspoon",
         },

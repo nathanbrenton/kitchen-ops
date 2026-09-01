@@ -9,34 +9,31 @@ export const oatmeal: Recipe = {
   id: 1,
   title: "Oatmeal",
   description: "Simple stovetop oatmeal made with oats, water, and salt.",
-  servings: 1,
-  ingredients: [
+  servingProfiles: [
     {
-      ingredient: oats,
-      quantity: 0.5,
-      unit: "cup",
-    },
-    {
-      ingredient: water,
-      quantity: 1,
-      unit: "cup",
-    },
-    {
-      ingredient: salt,
-      quantity: 0.125,
-      unit: "teaspoon",
-    },
-  ],
-  tools: [
-    {
-      tool: twoCupGlassMeasuringCup,
-      minimumServings: 1,
-      maximumServings: 4,
-    },
-    {
-      tool: saucepan,
-      minimumServings: 1,
-      maximumServings: 2,
-    },
+      servings: 1,
+      ingredients: [
+        {
+          ingredient: water,
+          quantity: 1,
+          unit: "cup",
+        },
+        {
+          ingredient: salt,
+          quantity: 0.25,
+          unit: "teaspoon",
+        },
+        {
+          ingredient: oats,
+          quantity: 0.5,
+          unit: "cup",
+        },
+      ],
+      tools: [
+        {
+          tool: twoCupGlassMeasuringCup
+        },
+      ],
+    }
   ],
 };

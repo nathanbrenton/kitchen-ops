@@ -1,4 +1,6 @@
 import type { Ingredient } from "../types/Ingredient";
+import { pantry } from "./ingredientStorageLocations";
+import { oatsAirtightJar } from "./storageContainers";
 
 import {
   grainsAndCereals,
@@ -60,5 +62,10 @@ export const oats: Ingredient = {
   attributes: [],
   varieties: [],
   recommendedProcessingMethods: [],
-  storageProfiles: [],
+  storageProfiles: [
+    {
+      location: pantry,
+      storageContainer: oatsAirtightJar,
+    },
+  ],
 };

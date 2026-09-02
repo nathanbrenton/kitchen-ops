@@ -4,6 +4,7 @@ import type { IngredientForm } from "./IngredientForm";
 import type { IngredientVariety } from "./IngredientVariety";
 import type { IngredientProcessingMethod } from "./IngredientProcessingMethod";
 import type { IngredientStorageProfile } from "./IngredientStorageProfile";
+import type {IngredientInventoryPolicy } from "./IngredientInventoryPolicy";
 
 export type Ingredient = {
   id: number;
@@ -15,4 +16,5 @@ export type Ingredient = {
   varieties: IngredientVariety[];
   recommendedProcessingMethods: IngredientProcessingMethod[];
   storageProfiles: IngredientStorageProfile[];
+  inventoryPolicy?: IngredientInventoryPolicy;
 };

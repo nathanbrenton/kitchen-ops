@@ -6,3 +6,10 @@ dist/
 
 .venv/
 __pycache__/
+
+
+# KitchenOps private inventory
+# Contains personal kitchen ownership records, manufacturer/model/SKU details,
+# identification notes, and other information not intended for the public repo.
+frontend/src/data/private-inventory/
+docs/private/

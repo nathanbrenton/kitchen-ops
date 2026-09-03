@@ -1,7 +1,7 @@
 import type { BaseKitchenTool } from "./BaseKitchenTool";
-import type { SpoonType } from "./SpoonTypes";
+import type { SpoonVariant } from "./SpoonVariant";
 
 export type Spoon = BaseKitchenTool & {
   category: "spoon";
-  type: SpoonType;
+  variants: SpoonVariant[];
 };

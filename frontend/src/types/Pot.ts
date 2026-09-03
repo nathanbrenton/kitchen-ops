@@ -1,10 +1,9 @@
 import type { BaseKitchenTool } from "./BaseKitchenTool";
-import type { CookwareCapacityUnit } from "./CookwareCapacityUnits";
 import type { PotType } from "./PotTypes";
+import type { PotVariant } from "./PotVariant";
 
 export type Pot = BaseKitchenTool & {
   category: "pot";
   type: PotType;
-  capacity: number;
-  capacityUnit: CookwareCapacityUnit;
+  variants: PotVariant[];
 };

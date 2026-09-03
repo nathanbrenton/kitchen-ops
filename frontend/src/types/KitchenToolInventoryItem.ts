@@ -14,7 +14,7 @@
 // They are used for static type checking and do not create
 // runtime JavaScript dependencies.
 
-import type { CookingTool } from "./CookingTool";
+import type { KitchenTool } from "./KitchenTool";
 import type { KitchenToolConstruction } from "./KitchenToolConstruction";
 import type { KitchenToolIdentificationConfidence } from "./KitchenToolIdentificationConfidence";
 import type { KitchenToolIdentifier } from "./KitchenToolIdentifier";
@@ -25,7 +25,7 @@ import type { KitchenToolVariant } from "./KitchenToolVariant";
 // for one private kitchen-tool inventory item.
 //
 // KitchenOps domain model:
-// - CookingTool describes the generic culinary tool family.
+// - KitchenTool describes the generic kitchen-tool family.
 // - KitchenToolVariant describes the physical size/version.
 // - KitchenToolInventoryItem describes one actual privately owned item.
 export type KitchenToolInventoryItem = {
@@ -33,7 +33,7 @@ export type KitchenToolInventoryItem = {
 
   // TypeScript: these required properties reference already-defined
   // typed objects instead of duplicating generic tool data.
-  tool: CookingTool;
+  tool: KitchenTool;
   variant: KitchenToolVariant;
 
   // TypeScript: "?" marks manufacturer as an optional property.

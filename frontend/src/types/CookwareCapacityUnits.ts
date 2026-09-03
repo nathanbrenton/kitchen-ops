@@ -1,2 +1,0 @@
-export type CookwareCapacityUnit =
-  | "quart";

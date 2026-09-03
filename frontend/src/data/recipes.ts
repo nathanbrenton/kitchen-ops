@@ -1,15 +1,18 @@
 // This is a DATA MODULE file.
 //
-// TypeScript: this file creates concrete Recipe objects from the reusable
-// type definitions in src/types/.
+// TypeScript: this module creates concrete object values that conform
+// to the Recipe type alias declaration.
 //
-// Culinary: each serving profile records the exact ingredients and tools
-// needed for that serving size. Larger batches will be entered manually
-// rather than assumed to scale linearly.
+// KitchenOps domain model: each recipe contains manually defined serving
+// profiles plus optional rights/provenance metadata.
 
 
+// ============================================================
 // IMPORTS
+// ============================================================
 
+// TypeScript: this is a type-only import used for static type checking.
+// It does not create a runtime JavaScript dependency.
 import type { Recipe } from "../types/Recipe";
 
 import { oats, salt, water } from "./ingredients";
@@ -32,10 +35,16 @@ import {
 // OATMEAL
 // ============================================================
 
-// Culinary: basic oatmeal is a traditional/common preparation.
-// KitchenOps is modeling this specific preparation, not claiming
-// ownership of the underlying culinary concept.
-
+// TypeScript: this object literal is statically checked against the
+// Recipe type alias declaration.
+//
+// KitchenOps domain model: basic oatmeal is classified as a traditional
+// culinary preparation rather than an original KitchenOps invention.
+//
+// Rights distinction:
+// the underlying oatmeal preparation is traditional, while original
+// KitchenOps prose, photography, video, layout, and other expressive
+// material may still have separate copyright protection.
 export const oatmeal: Recipe = {
   id: 1,
   title: "Oatmeal",
@@ -48,45 +57,60 @@ export const oatmeal: Recipe = {
       ingredients: [
         {
           ingredient: water,
-          quantity: 1,
-          unit: "cup",
+
+          // TypeScript: measurement must conform to one member of the
+          // Measurement union type.
+          //
+          // Culinary: water is measured by volume.
+          measurement: {
+            quantity: 1,
+            unit: "cup",
+          },
         },
 
         {
           ingredient: salt,
           variety: celticSeaSalt,
-          quantity: 0.25,
-          unit: "teaspoon",
+
+          // TypeScript: this object also conforms to VolumeMeasurement,
+          // which is one member of the Measurement union type.
+          //
+          // Culinary: the recipe uses 1/4 teaspoon of salt.
+          measurement: {
+            quantity: 0.25,
+            unit: "teaspoon",
+          },
         },
 
         {
           ingredient: oats,
           form: rolled,
-          quantity: 0.5,
-          unit: "cup",
+
+          // Culinary: rolled oats are measured here with a dry
+          // measuring cup.
+          measurement: {
+            quantity: 0.5,
+            unit: "cup",
+          },
         },
       ],
 
       tools: [
-        // Culinary: measure the water with a liquid measuring cup.
         {
           tool: measuringCupLiquid,
           variant: measuringCupLiquidVariantOneCup,
         },
 
-        // Culinary: measure the rolled oats with a dry measuring cup.
         {
           tool: measuringCupDry,
           variant: measuringCupDryVariantHalfCup,
         },
 
-        // Culinary: measure the salt with a calibrated 1/4-teaspoon spoon.
         {
           tool: measuringSpoon,
           variant: measuringSpoonVariantQuarterTeaspoon,
         },
 
-        // Culinary: cook the single serving in the small saucepan variant.
         {
           tool: saucepan,
           variant: saucepanVariantPointNineQuart,
@@ -94,4 +118,51 @@ export const oatmeal: Recipe = {
       ],
     },
   ],
+
+  rights: {
+    // TypeScript: sourceAttributions is an array property whose elements
+    // must conform to the RecipeSourceAttribution object type.
+    sourceAttributions: [
+      {
+        relationship: "traditional",
+        notes:
+          "Basic oatmeal is a traditional/common preparation with no single identifiable modern originator.",
+      },
+    ],
+
+    // TypeScript: usagePolicy is an optional nested object property.
+    // Its outputs property is an array of RecipeOutputPolicy objects.
+    //
+    // KitchenOps domain model:
+    // full attribution belongs on surfaces with room for provenance,
+    // while compact attribution is more appropriate for video overlays.
+    usagePolicy: {
+      outputs: [
+        {
+          surface: "web",
+          attributionDetail: "full",
+        },
+        {
+          surface: "pdf",
+          attributionDetail: "full",
+        },
+        {
+          surface: "youtube-description",
+          attributionDetail: "full",
+        },
+        {
+          surface: "video-end-credit",
+          attributionDetail: "compact",
+        },
+        {
+          surface: "video-watermark",
+          attributionDetail: "compact",
+        },
+      ],
+    },
+
+    // KitchenOps domain model:
+    // license is intentionally omitted until a content-licensing
+    // policy is selected for KitchenOps recipe/editorial/media content.
+  },
 };

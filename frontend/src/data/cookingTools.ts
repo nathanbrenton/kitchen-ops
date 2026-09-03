@@ -16,7 +16,7 @@
 // Type-only imports are used for static type checking and are removed
 // from the emitted JavaScript.
 
-import type { CookingTool } from "../types/CookingTool";
+import type { KitchenTool } from "../types/KitchenTool";
 
 import type { MeasuringCup } from "../types/MeasuringCup";
 import type { MeasuringCupVariant } from "../types/MeasuringCupVariant";
@@ -687,15 +687,15 @@ export const stockPot: Pot = {
 // COOKING TOOL CATALOG
 // ============================================================
 
-// TypeScript: CookingTool is a union type definition.
+// TypeScript: KitchenTool is a union type.
 // Therefore, every array element must conform to at least one member
-// of the CookingTool union.
+// of the KitchenTool union.
 //
 // Culinary: this array represents known generic tool families.
 // It does NOT mean every kitchen location owns every possible tool
 // or every possible variant.
 
-export const cookingTools: CookingTool[] = [
+export const cookingTools: KitchenTool[] = [
   measuringCupDry,
   measuringCupLiquid,
   measuringSpoon,

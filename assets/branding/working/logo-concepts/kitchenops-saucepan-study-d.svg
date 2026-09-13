@@ -1,0 +1,45 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+>
+  <rect
+    width="512"
+    height="512"
+    fill="white"
+  />
+
+  <!-- Saucepan body: outer silhouette -->
+  <ellipse
+    cx="270"
+    cy="230"
+    rx="130"
+    ry="95"
+    fill="black"
+  />
+
+  <!--
+    Saucepan interior / negative space.
+
+    The interior ellipse is shifted slightly upward.
+    This makes the lower rim visually thicker than the upper rim,
+    suggesting the front wall of the saucepan.
+  -->
+  <ellipse
+    cx="270"
+    cy="220"
+    rx="94"
+    ry="62"
+    fill="white"
+  />
+
+  <!-- Handle: extends toward the lower-left / viewer -->
+  <line
+    x1="178"
+    y1="297"
+    x2="75"
+    y2="400"
+    stroke="black"
+    stroke-width="36"
+    stroke-linecap="round"
+  />
+</svg>

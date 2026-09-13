@@ -1,0 +1,117 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  width="512"
+  height="512"
+  viewBox="0 0 512 512"
+>
+  <!--
+    HANDLE
+
+    Design intent:
+    - restore the successful diagonal taper;
+    - restore slight perspective/tilt by shifting the inner hole upward;
+    - keep the inner hole tapered so it matches the outer silhouette.
+
+    The handle is drawn first so the body and rim can overlap the neck.
+  -->
+  <path
+    fill="#000000"
+    fill-rule="evenodd"
+    d="
+      M 184 300
+      L 54 397
+      Q 30 416 49 439
+      Q 71 461 97 440
+      L 209 318
+      Z
+
+      M 143 338
+      L 80 389
+      Q 71 397 80 406
+      Q 89 415 98 406
+      L 152 349
+      Q 158 343 152 337
+      Q 147 332 143 338
+      Z
+    "
+  />
+
+  <!--
+    PAN BODY / SIDEWALL
+
+    This is the cylindrical saucepan body, not the rim.
+
+    Changes in this study:
+    - slightly more overlap / shoulder on the left side,
+      so the handle feels more affixed to the body;
+    - still shallow enough to read as saucepan rather than stockpot.
+  -->
+  <path
+    fill="#000000"
+    d="
+      M 145 232
+      L 158 271
+
+      C 164 314 214 343 272 343
+      C 330 343 380 314 386 271
+
+      L 392 232
+
+      C 392 282 338 323 272 323
+      C 206 323 152 282 145 232
+
+      Z
+    "
+  />
+
+  <!--
+    RIM
+
+    The rim is the top elliptical ring surrounding the opening.
+
+    This version keeps the thinner rim from the last study.
+    The inner opening remains slightly shifted upward so the
+    lower/front rim still feels heavier.
+  -->
+  <path
+    fill="#000000"
+    fill-rule="evenodd"
+    d="
+      M 402 228
+      C 402 175.533 343.797 133 272 133
+      C 200.203 133 142 175.533 142 228
+      C 142 280.467 200.203 323 272 323
+      C 343.797 323 402 280.467 402 228
+      Z
+
+      M 380 222
+      C 380 261.765 331.647 294 272 294
+      C 212.353 294 164 261.765 164 222
+      C 164 182.235 212.353 150 272 150
+      C 331.647 150 380 182.235 380 222
+      Z
+    "
+  />
+
+  <!--
+    INTERIOR FLOOR CUE
+
+    Returned to the upward-open "smile" orientation,
+    but raised slightly higher than before.
+
+    Goal:
+    - suggest the visible interior floor;
+    - avoid reading as a sad face;
+    - avoid becoming a full illustrative inner ellipse.
+  -->
+  <path
+    fill="#000000"
+    d="
+      M 208 244
+      C 246 266 298 266 336 244
+      C 298 252 246 252 208 244
+      Z
+    "
+  />
+</svg>

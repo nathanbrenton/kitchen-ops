@@ -1,0 +1,86 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  width="512"
+  height="512"
+  viewBox="0 0 512 512"
+>
+  <!--
+    HANDLE
+
+    Closed path definition with a tapered transparent hole.
+    The handle angle is slightly less steep than before so it
+    agrees more naturally with the saucepan perspective.
+  -->
+  <path
+    fill="#000000"
+    fill-rule="evenodd"
+    d="
+      M 188 300
+      L 57 395
+      Q 31 414 51 439
+      Q 73 462 98 441
+      L 210 317
+      Z
+
+      M 150 340
+      L 84 388
+      Q 75 396 84 405
+      Q 93 414 102 405
+      L 161 347
+      Q 166 342 161 337
+      Q 156 332 150 340
+      Z
+    "
+  />
+
+  <!--
+    HANDLE ATTACHMENT LUG / BODY CONNECTION
+
+    This small connector shape makes the handle feel mounted to the
+    saucepan body, rather than directly to the rim ring.
+
+    It is intentionally simple and overlaps both handle and body.
+  -->
+  <path
+    fill="#000000"
+    d="
+      M 208 292
+      Q 195 301 191 313
+      Q 207 321 224 316
+      Q 233 306 231 293
+      Q 221 288 208 292
+      Z
+    "
+  />
+
+  <!--
+    SAUCEPAN BODY
+
+    Compound path:
+    - outer contour = body + rim silhouette
+    - inner contour = transparent opening
+
+    The opening is shifted upward slightly so the lower/front wall
+    reads heavier, giving subtle depth.
+  -->
+  <path
+    fill="#000000"
+    fill-rule="evenodd"
+    d="
+      M 402 228
+      C 402 175.533 343.797 133 272 133
+      C 200.203 133 142 175.533 142 228
+      C 142 280.467 200.203 323 272 323
+      C 343.797 323 402 280.467 402 228
+      Z
+
+      M 366 218
+      C 366 183.758 323.918 156 272 156
+      C 220.082 156 178 183.758 178 218
+      C 178 252.242 220.082 280 272 280
+      C 323.918 280 366 252.242 366 218
+      Z
+    "
+  />
+</svg>

@@ -1,0 +1,140 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  width="512"
+  height="512"
+  viewBox="0 0 512 512"
+>
+  <!--
+    HANDLE
+
+    Closed SVG compound path definition:
+    - outer contour = handle silhouette
+    - inner contour = tapered negative-space opening
+
+    Kept close to the later/better raised-handle studies.
+  -->
+  <path
+    fill="#000000"
+    fill-rule="evenodd"
+    d="
+      M 196 270
+      L 56 385
+
+      Q 30 406 49 431
+      Q 70 454 96 433
+
+      L 219 296
+      Z
+
+
+      M 157 317
+      L 87 376
+
+      Q 78 384 86 393
+      Q 95 402 104 394
+
+      L 167 330
+
+      Q 174 324 168 318
+      Q 162 312 157 317
+
+      Z
+    "
+  />
+
+  <!--
+    UNIFIED SAUCEPAN BODY + RIM
+
+    Compound path definition:
+    - outer contour = top rim outer silhouette + sidewalls + lower base contour
+    - inner contour = top opening
+
+    Main idea of this study:
+    - the LOWER BASE is no longer treated like a flat or semi-flat line;
+    - instead, it is treated like a rounded underside ellipse
+      that belongs to the same perspective family as the top rim.
+
+    This should make the vessel feel more like:
+      rim ellipse
+      + sidewalls
+      + lower echo / underside ellipse
+
+    rather than:
+      rim ellipse
+      + arbitrary plump bottom
+  -->
+  <path
+    fill="#000000"
+    fill-rule="evenodd"
+    d="
+      M 156 220
+
+      C 156 174
+        208 138
+        272 138
+
+      C 336 138
+        388 174
+        388 220
+
+      L 388 294
+
+      C 388 338
+        336 372
+        272 372
+
+      C 208 372
+        156 338
+        156 294
+
+      Z
+
+
+      M 374 214
+
+      C 374 247
+        328 274
+        272 274
+
+      C 216 274
+        170 247
+        170 214
+
+      C 170 181
+        216 154
+        272 154
+
+      C 328 154
+        374 181
+        374 214
+
+      Z
+    "
+  />
+
+  <!--
+    INTERIOR FLOOR CUE
+
+    Left intentionally subtle for now.
+    We are not trying to solve every interior detail in this pass.
+
+    If the overall saucepan form works better, we can refine this later.
+  -->
+  <path
+    fill="#000000"
+    d="
+      M 214 236
+
+      C 247 253
+        297 253
+        330 236
+
+      C 297 243
+        247 243
+        214 236
+
+      Z
+    "
+  />
+</svg>

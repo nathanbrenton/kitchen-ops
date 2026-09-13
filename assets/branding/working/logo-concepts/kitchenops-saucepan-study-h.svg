@@ -1,0 +1,68 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  width="512"
+  height="512"
+  viewBox="0 0 512 512"
+>
+  <!--
+    Handle.
+
+    This is a closed, filled SVG path rather than a stroked line.
+
+    The outer silhouette tapers:
+    - narrowest where it connects to the saucepan;
+    - widest at the lower-left grip end.
+
+    The second subpath creates a true transparent hole using
+    negative-space geometry.
+  -->
+  <path
+    fill="black"
+    fill-rule="evenodd"
+    d="
+      M 190 307
+      L 105 413
+      C 89 431 66 435 52 421
+      C 38 407 42 387 65 373
+      L 171 289
+      Z
+
+      M 162 319
+      L 99 382
+      C 94 387 94 395 99 400
+      C 104 405 112 405 117 400
+      L 176 341
+      C 181 336 181 329 176 324
+      C 172 320 167 318 162 319
+      Z
+    "
+  />
+
+  <!--
+    Saucepan rim.
+
+    Both the outer rim and inner opening are contained in one
+    compound path. The interior is a true transparent hole,
+    not a white ellipse placed on top.
+  -->
+  <path
+    fill="black"
+    fill-rule="evenodd"
+    d="
+      M 400 230
+      C 400 177.533 341.797 135 270 135
+      C 198.203 135 140 177.533 140 230
+      C 140 282.467 198.203 325 270 325
+      C 341.797 325 400 282.467 400 230
+      Z
+
+      M 364 220
+      C 364 185.758 321.918 158 270 158
+      C 218.082 158 176 185.758 176 220
+      C 176 254.242 218.082 282 270 282
+      C 321.918 282 364 254.242 364 220
+      Z
+    "
+  />
+</svg>

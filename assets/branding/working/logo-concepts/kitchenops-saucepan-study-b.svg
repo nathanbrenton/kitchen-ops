@@ -1,0 +1,37 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+>
+  <rect
+    width="512"
+    height="512"
+    fill="white"
+  />
+
+  <!-- Saucepan body -->
+  <circle
+    cx="256"
+    cy="240"
+    r="120"
+    fill="black"
+  />
+
+  <!-- Open interior / rim -->
+  <circle
+    cx="256"
+    cy="240"
+    r="88"
+    fill="white"
+  />
+
+  <!-- Handle: attached near the lower-left outer rim, extending outward -->
+  <line
+    x1="171"
+    y1="325"
+    x2="82"
+    y2="414"
+    stroke="black"
+    stroke-width="38"
+    stroke-linecap="round"
+  />
+</svg>

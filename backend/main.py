@@ -3,6 +3,8 @@ from fastapi.staticfiles import StaticFiles
 
 from docs import router as docs_router
 
+from schemas import RootResponse
+
 
 # Instantiate the FastAPI application object and assign it to "app".
 # docs_url=None disables FastAPI's default CDN-backed Swatter UI route.
@@ -26,9 +28,10 @@ app.mount(
 app.include_router(docs_router)
 
 
-
+# FastAPI uses "RootResponse" as the response model for this path operation.
+# FastAPI validates and documents the outgoing response using this model.
 # Decorator: register the function below as the path operation for HTTP GET /.
-@app.get("/")
+@app.get("/", response_model=RootResponse)
 # Function: root route handler. (FastAPI: "path operation function")
 def read_root():
     # Return a Python dictionary.

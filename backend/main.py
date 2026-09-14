@@ -3,7 +3,7 @@ from fastapi.staticfiles import StaticFiles
 
 from docs import router as docs_router
 
-from schemas import RootResponse
+from schemas import RecipeCreate, RootResponse
 
 
 # Instantiate the FastAPI application object and assign it to "app".
@@ -37,3 +37,9 @@ def read_root():
     # Return a Python dictionary.
     # FastAPI serializes it into a JSON HTTP response.
     return {"message": "KitchenOps API"}
+
+# create a HTTP POST path operation
+@app.post("/recipes", response_model=RecipeCreate)
+# tell FastAPI to interpret the request body using the RecipeCreate Pydantic model
+def create_recipe(recipe: RecipeCreate):
+    return recipe

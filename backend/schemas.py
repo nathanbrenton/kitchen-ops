@@ -8,3 +8,7 @@ from pydantic import BaseModel
 class RootResponse(BaseModel):
     # message = Model field   |   str = type annotation
     message: str
+
+# Request model for incoming recipe data
+class RecipeCreate(BaseModel):
+    name: str

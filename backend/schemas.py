@@ -10,6 +10,13 @@ class RootResponse(BaseModel):
     message: str
 
 # Request model for incoming recipe data
+# data the client sends
 class RecipeCreate(BaseModel):
     # min_length = "validation constraint"
     name: str = Field(min_length=1)
+
+
+# Data the server returns
+class RecipeResponse(BaseModel):
+  id: int
+  name: str

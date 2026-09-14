@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, status
 from fastapi.staticfiles import StaticFiles
 
 from docs import router as docs_router
@@ -39,7 +39,13 @@ def read_root():
     return {"message": "KitchenOps API"}
 
 # create a HTTP POST path operation
-@app.post("/recipes", response_model=RecipeResponse)
+@app.post(
+    "/recipes",
+    response_model=RecipeResponse,
+    status_code=status.HTTP_201_CREATED,
+)
+
+
 # tell FastAPI to interpret the request body using the RecipeCreate Pydantic model
 def create_recipe(recipe: RecipeCreate):
     return {

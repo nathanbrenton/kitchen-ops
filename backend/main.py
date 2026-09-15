@@ -1,9 +1,11 @@
-from fastapi import FastAPI, status
+from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
 from docs import router as docs_router
 
-from schemas import RecipeCreate, RecipeResponse, RootResponse
+from schemas import RootResponse
+
+from routers.recipes import router as recipes_router
 
 
 # Instantiate the FastAPI application object and assign it to "app".
@@ -27,6 +29,8 @@ app.mount(
 # This adds our custom, offline GET /docs route.
 app.include_router(docs_router)
 
+app.include_router(recipes_router)
+
 
 # FastAPI uses "RootResponse" as the response model for this path operation.
 # FastAPI validates and documents the outgoing response using this model.
@@ -38,12 +42,12 @@ def read_root():
     # FastAPI serializes it into a JSON HTTP response.
     return {"message": "KitchenOps API"}
 
-# create a HTTP POST path operation
-@app.post(
-    "/recipes",
-    response_model=RecipeResponse,
-    status_code=status.HTTP_201_CREATED,
-)
+## create a HTTP POST path operation
+#@app.post(
+#    "/recipes",
+#    response_model=RecipeResponse,
+#    status_code=status.HTTP_201_CREATED,
+#)
 
 
 # tell FastAPI to interpret the request body using the RecipeCreate Pydantic model

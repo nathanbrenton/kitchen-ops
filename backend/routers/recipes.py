@@ -3,11 +3,15 @@ from fastapi import APIRouter, status
 from schemas import RecipeCreate, RecipeResponse
 
 
-router = APIRouter()
+router = APIRouter(
+    prefix="/recipes",
+    tags=["recipes"],
+)
 
 
+# Route decorator
 @router.post(
-    "/recipes",
+    "",
     response_model=RecipeResponse,
     status_code=status.HTTP_201_CREATED,
 )

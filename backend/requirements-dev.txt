@@ -1,0 +1,15 @@
+# KitchenOps backend development/test dependencies.
+#
+# Include the application's runtime dependencies first so installing this
+# file produces an environment capable of both running and testing the API.
+-r requirements.txt
+
+# pytest discovers and runs the backend automated test suite.
+pytest==9.1.1
+
+# Starlette's TestClient uses httpx2 for simulated HTTP requests against
+# the FastAPI application without requiring Uvicorn or a real network port.
+#
+# This is a testing dependency; KitchenOps application code does not
+# currently import httpx2 directly.
+httpx2==2.12.0

@@ -1,0 +1,16 @@
+# KitchenOps backend runtime dependencies.
+#
+# These are direct dependencies used by KitchenOps application code.
+# Exact versions are pinned so a future virtual environment can reproduce
+# the backend version set that we have already tested successfully.
+
+# FastAPI provides the web/API framework.
+fastapi==0.141.1
+
+# Pydantic provides request/response models and validation.
+# We declare it directly because KitchenOps imports and uses Pydantic itself,
+# even though FastAPI also depends on it.
+pydantic==2.13.5
+
+# Uvicorn is the ASGI development/application server used to run FastAPI.
+uvicorn==0.52.4

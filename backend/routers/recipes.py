@@ -25,6 +25,32 @@ def create_recipe(recipe: RecipeCreate):
 
 
 @router.get(
+    "",
+    response_model=list[RecipeResponse],
+)
+def list_recipes():
+    # GET /recipes represents the recipe collection.
+    # 
+    # This uses the same URL path as POST /recipes, but that is valid because
+    # the HTTP methods are different:
+    # 
+    # GET /recipes -> read the collection
+    # POST /recipes -> chin a new resource in the collection
+    # 
+    # "list[RecipeResponse]" means the response must be a Python list whose
+    # individual items each conform to the RecipeResponse Pydantic model.
+
+    # We still do not have persistence, so this is temporary demonstration data.
+    # A future data query will replace this hard-coded list.
+    return [
+        {
+            "id": 1,
+            "name": "Basic Oatmeal",
+        },
+    ]
+
+
+@router.get(
     "/{recipe_id}",
     response_model=RecipeResponse,
 )

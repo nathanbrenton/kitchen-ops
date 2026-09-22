@@ -146,3 +146,25 @@ def test_read_recipe_rejects_non_integer_id():
 
     # This identifies the failure as an integer parsing problem.
     assert error["type"] == "int_parsing"
+
+def test_list_recipes():
+    # Simulate GET /recipes.
+    # 
+    # This uses the same URL path as POST /recipes, but FastAPI can distinguish
+    # the two operations because the HTTP methods are different.
+    response = client.get("/recipes")
+
+    # Reading the collection should succeed with HTTP 200 OK.
+    assert response.status_code == 200
+
+    # The response is a JSON array because the route declares:
+    # 
+    #   response_model=list[RecipeResponse]
+    # 
+    # Each item in the list must conform to RecipeResponse.
+    assert response.json() == [
+        {
+            "id": 1,
+            "name": "Basic Oatmeal",
+        },
+    ]

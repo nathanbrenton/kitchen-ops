@@ -14,3 +14,10 @@ pydantic==2.13.5
 
 # Uvicorn is the ASGI development/application server used to run FastAPI.
 uvicorn==0.52.4
+
+# SQLAlchemy provides the database toolkit and ORM layer.
+#
+# KitchenOps will use it to define database-backed models and perform
+# database operations while keeping SQL/database concerns separate from
+# the FastAPI request/response layer.
+sqlalchemy==2.0.52
